@@ -1,0 +1,5 @@
+alt + ctrl - h : osascript -e 'tell application "ITerm2" to activate'
+alt + ctrl - t : osascript -e 'tell application "Google Chrome" to activate'
+alt + ctrl - s : osascript -e 'tell application "Slack" to activate'
+alt + ctrl - l : osascript -e 'tell application "Spotify" to activate'
+alt + ctrl - v : osascript -e 'tell application "Visual Studio Code" to tell window 1 to activate'

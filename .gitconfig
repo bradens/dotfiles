@@ -1,0 +1,8 @@
+[user]
+name = Braden Simpson
+email = bradensimpsons@gmail.com
+
+[alias]
+co = checkout
+b = branch --sort=-committerdate
+
