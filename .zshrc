@@ -69,7 +69,7 @@ export PATH="$HOME/.rbenv/shims:/usr/local/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export LC_ALL="en_US.UTF-8"
-export EDITOR=code
+export EDITOR=vim
 
 # Aliases
 # ==============================
