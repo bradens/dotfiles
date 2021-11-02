@@ -14,3 +14,4 @@ brew redis
 brew direnv
 brew 1password-cli
 brew --cask docker
+brew --cask messenger

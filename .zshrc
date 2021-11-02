@@ -82,9 +82,11 @@ alias gcam="git add . && git commit -m"
 alias gb="git b | FZF"
 alias ytdl="youtube-dl --extract-audio --audio-format mp3 --exec 'mv {} ~/Music/iTunes/iTunes\ Media/Automatically\ Add\ To\ iTunes.localized/'"
 alias gpv="gh pr view"
+alias gcm="git checkout master || git checkout main"
 
 # Don't shame me, I purchased vmware long ago but can't find my license key
 alias reset-vmware-license='sudo rm /Library/Preferences/VMware\ Fusion/license-fusion*'
+alias grc="git rebase --continue" 
 
 alias tf="terraform"
 alias alogs='awslogs get $(awslogs groups | fzf) ALL -G -w -i 1'
