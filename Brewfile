@@ -13,5 +13,7 @@ brew tmuxp
 brew redis
 brew direnv
 brew 1password-cli
+brew awslogs
 brew --cask docker
 brew --cask messenger
+brew --cask spotify

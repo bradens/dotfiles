@@ -4,3 +4,11 @@ alt + ctrl - s : osascript -e 'tell application "Slack" to activate'
 alt + ctrl - l : osascript -e 'tell application "Spotify" to activate'
 alt + ctrl - v : osascript -e 'tell application "Visual Studio Code" to tell window 1 to activate'
 alt + ctrl - g : open -a todoist
+
+
+alt + ctrl - left : yabai -m window --space prev; yabai -m space --focus prev
+alt + ctrl - right : yabai -m window --space next; yabai -m space --focus next
+ctrl - 1 : yabai -m space --focus 1
+ctrl - 2 : yabai -m space --focus 2
+ctrl - 3 : yabai -m space --focus 3
+ctrl - 4 : yabai -m space --focus 4

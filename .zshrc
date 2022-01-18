@@ -67,12 +67,12 @@ export PATH="$HOME/.rbenv/shims:/usr/local/bin:$PATH"
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export LC_ALL="en_US.UTF-8"
-export EDITOR=vim
+export EDITOR=nvim
 
 # Aliases
 # ==============================
 alias zshrc='e ~/.zshrc'
-alias e='vim'
+alias e='nvim'
 alias st='git status -sb'
 alias gp='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias gd='git diff'
@@ -83,14 +83,25 @@ alias gb="git b | FZF"
 alias ytdl="youtube-dl --extract-audio --audio-format mp3 --exec 'mv {} ~/Music/iTunes/iTunes\ Media/Automatically\ Add\ To\ iTunes.localized/'"
 alias gpv="gh pr view"
 alias gcm="git checkout master || git checkout main"
+alias compose="docker compose"
+alias ll='exa --long --header --group --git --modified --color-scale'
+alias ghrw='gh run watch && osascript -e "notify \"DONE\""'
+
+function notifyFunction {
+  osascript -e "display notification \"$1\""
+}
+alias notify="notifyFunction"
 
 # Don't shame me, I purchased vmware long ago but can't find my license key
 alias reset-vmware-license='sudo rm /Library/Preferences/VMware\ Fusion/license-fusion*'
-alias grc="git rebase --continue" 
+alias grc="git rebase --continue"
 
 alias tf="terraform"
 alias alogs='awslogs get $(awslogs groups | fzf) ALL -G -w -i 1'
-alias plogs='AWS_PROFILE=production;awslogs get $(awslogs groups | fzf) ALL -G -w -i 1'
+# alias plogs='AWS_PROFILE=production;awslogs get $(awslogs groups | fzf) ALL -G -w -i 2'
+# alias slogs='AWS_PROFILE=staging;awslogs get $(awslogs groups | fzf) ALL -G -w -i 2'
+alias slogs='AWS_PROFILE=staging;aws logs tail --follow --format short $(aws logs describe-log-groups | jq -r ".logGroups[].logGroupName" | fzf)'
+alias plogs='AWS_PROFILE=production;aws logs tail --follow --format short $(aws logs describe-log-groups | jq -r ".logGroups[].logGroupName" | fzf)'
 alias gprc="checkoutPr"
 function checkoutPr {
   gh pr checkout $(gh pr list | fzf | awk '{print $1;}')

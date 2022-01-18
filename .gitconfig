@@ -7,3 +7,5 @@ co = checkout
 b = branch --sort=-committerdate
 
 
+[init]
+	defaultBranch = main
